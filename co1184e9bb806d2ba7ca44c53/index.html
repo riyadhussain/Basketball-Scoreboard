@@ -1,0 +1,25 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="home">
+                <h3 class="header">HOME</h3>
+                <h3 id="home-score">0</h3>
+                <button id="home-btn1" onclick="increaseHomeScore1()">+1</button>
+                <button id="home-btn2" onclick="increaseHomeScore2()">+2</button>
+                <button id="home-btn3" onclick="increaseHomeScore3()">+3</button>
+            </div>
+            <div id="guest">
+                <h3 class="header">GUEST</h3>
+                <h3 id="away-score">0</h3>
+                <button id="away-btn1" onclick="increaseAwayScore1()">+1</button>
+                <button id="away-btn2" onclick="increaseAwayScore2()">+2</button>
+                <button id="away-btn3" onclick="increaseAwayScore3()">+3</button>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
