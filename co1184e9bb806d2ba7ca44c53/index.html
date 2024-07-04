@@ -1,25 +1,59 @@
-<html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <div class="container">
-            <div id="home">
-                <h3 class="header">HOME</h3>
-                <h3 id="home-score">0</h3>
-                <button id="home-btn1" onclick="increaseHomeScore1()">+1</button>
-                <button id="home-btn2" onclick="increaseHomeScore2()">+2</button>
-                <button id="home-btn3" onclick="increaseHomeScore3()">+3</button>
-            </div>
-            <div id="guest">
-                <h3 class="header">GUEST</h3>
-                <h3 id="away-score">0</h3>
-                <button id="away-btn1" onclick="increaseAwayScore1()">+1</button>
-                <button id="away-btn2" onclick="increaseAwayScore2()">+2</button>
-                <button id="away-btn3" onclick="increaseAwayScore3()">+3</button>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hockey Scoreboard</title>
+    <link
+      href="https://fonts.cdnfonts.com/css/cursed-timer-ulil"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Graduate&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="container">
+      <div id="home">
+        <h3 class="team">HOME</h3>
+        <h3 id="home-score">0</h3>
+        <h3 class="penalty team">Penalty</h3>
+        <h3 class="penaltyTime homePenalty">0:00</h3>
+        <button class="home-btn1 btns">Goal! +1</button>
+        <button class="btns" value="sound" onclick="playGoalHorn()">
+          Goal Horn
+          <audio src="audio/rangers.mp3"></audio>
+        </button>
+        <button class="btns penaltyHomeBtn">Start Penalty..</button>
+      </div>
+
+      <div id="Counters">
+        <h1 id="timeCounter">20:00</h1>
+        <div id="periodCounter">
+          <h4 class="team periodText">PERIOD</h4>
+          <textarea type="'text" id="period" placeholder="1"></textarea>
+          <div class="gameBtns">
+            <button class="gameStart btns">Start Game</button>
+            <button class="gameReset btns">Reset</button>
+          </div>
         </div>
-        <script src="index.js"></script>
-    </body>
+      </div>
+
+      <div id="guest">
+        <h3 class="team">AWAY</h3>
+        <h3 id="away-score">0</h3>
+        <h3 class="penalty team">Penalty</h3>
+        <h3 class="penaltyTime awayPenalty">0:00</h3>
+        <button class="away-btn1 btns">Goal.. +1</button>
+        <button class="btns" value="sound" onclick="playBooHorn()">
+          Boo Horn
+        </button>
+        <button class="btns penaltyAwayBtn">Start Penalty!</button>
+      </div>
+    </header>
+
+    <script src="index.js"></script>
+  </body>
 </html>
